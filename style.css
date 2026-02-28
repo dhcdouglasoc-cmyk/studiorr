@@ -6,103 +6,172 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #eafcf1;
+  background: #fdf8f6;
   color: #4a4a4a;
 }
 
-/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 60px;
+  padding: 20px;
 }
 
 header h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
+  font-size: 22px;
 }
 
-nav a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: #4a4a4a;
-  font-weight: 500;
-}
-
-/* HERO */
-.hero {
-  height: 70vh;
-  background: linear-gradient(to right, #eafcf1, #eafcf1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
-}
-
-.hero p {
-  margin: 15px 0 25px;
-  font-size: 18px;
-}
-
-.hero button {
-  padding: 14px 30px;
+#menuToggle {
+  background: none;
   border: none;
-  background: #eafcf1;
-  color: white;
-  font-size: 16px;
-  border-radius: 30px;
+  font-size: 26px;
   cursor: pointer;
 }
 
-/* SERVIÇOS */
-.servicos {
-  padding: 80px 60px;
-  text-align: center;
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-.servicos h3 {
-  font-size: 32px;
-  margin-bottom: 40px;
+nav a {
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #f5dcdc, #f8e8e8);
+}
+
+.hero h2 {
+  font-size: 28px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #d8a7a7;
+  color: white;
+}
+
+.servicos, .galeria, .endereco, .contato {
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .cards {
   display: flex;
-  gap: 30px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .card {
   background: white;
-  padding: 30px;
-  width: 260px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-/* SOBRE */
-.sobre {
-  padding: 80px 100px;
-  text-align: center;
-  background: #eafcf1;
+/* CAROUSEL */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
 }
 
-/* CONTATO */
-.contato {
-  padding: 80px 60px;
-  text-align: center;
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
 }
 
-/* FOOTER */
-footer {
-  padding: 25px;
-  text-align: center;
-  background: #eafcf1;
-  margin-top: 60px;
+.carousel img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #d8a7a7;
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.endereco iframe {
+  width: 100%;
+  height: 250px;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+form button {
+  background: #d8a7a7;
+  border: none;
+  padding: 12px;
+  color: white;
+  border-radius: 25px;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+
+  nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+
+  nav a {
+    margin-left: 25px;
+  }
+
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    width: 250px;
+  }
+
 }

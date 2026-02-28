@@ -1,62 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Studio R&R | Beleza & Estética</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Bella | Beleza & Estética</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <h1>Studio R&R</h1>
-    <nav>
-      <a href="#servicos">Serviços</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
+<header>
+  <h1>Studio Bella</h1>
+  <button id="menuToggle">☰</button>
+  <nav id="menu">
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#endereco">Endereço</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h2>Realce sua beleza natural</h2>
-    <p>Cuidado, estilo e autoestima em cada detalhe</p>
-    <button onclick="scrollContato()">Agendar horário</button>
-  </section>
+<section class="hero">
+  <h2>Realce sua beleza natural</h2>
+  <p>Cuidado e autoestima em cada detalhe</p>
+  <button onclick="scrollContato()">Agendar horário</button>
+</section>
 
-  <section id="servicos" class="servicos">
-    <h3>Nossos Serviços</h3>
+<section id="servicos" class="servicos">
+  <h3>Nossos Serviços</h3>
+  <div class="cards">
+    <div class="card">Design de Sobrancelhas</div>
+    <div class="card">Manicure & Pedicure</div>
+    <div class="card">Limpeza de Pele</div>
+  </div>
+</section>
 
-    <div class="cards">
-      <div class="card">
-        <h4>Design de Sobrancelhas</h4>
-        <p>Harmonia e expressão no seu olhar.</p>
-      </div>
+<section id="galeria" class="galeria">
+  <h3>Nossos Trabalhos</h3>
 
-      <div class="card">
-        <h4>Manicure & Pedicure</h4>
-        <p>Beleza e cuidado em cada detalhe.</p>
-      </div>
-
-      <div class="card">
-        <h4>Limpeza de Pele</h4>
-        <p>Pele renovada, leve e saudável.</p>
-      </div>
+  <div class="carousel">
+    <button class="prev">&#10094;</button>
+    <div class="carousel-track">
+      <img src="https://picsum.photos/400/500?1">
+      <img src="https://picsum.photos/400/500?2">
+      <img src="https://picsum.photos/400/500?3">
+      <img src="https://picsum.photos/400/500?4">
     </div>
-  </section>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
 
-  <section id="sobre" class="sobre">
-    <h3>Sobre o Studio</h3>
-    <p>
-      Somos um studio especializado em beleza feminina, focado em proporcionar
-      experiências únicas, acolhedoras e cheias de cuidado.
-    </p>
-  </section>
+<section id="endereco" class="endereco">
+  <h3>Onde Estamos</h3>
+  <p>Rua das Flores, 123 - Centro</p>
+  <p>Ribeirão Preto - SP</p>
 
-  <footer>
-    <p>© 2026 Studio R&R • Beleza que inspira</p>
-  </footer>
+  <iframe 
+    src="https://www.google.com/maps?q=Ribeirao+Preto&output=embed">
+  </iframe>
+</section>
 
-  <script src="script.js"></script>
+<section id="contato" class="contato">
+  <h3>Fale com a gente</h3>
+
+  <form id="formContato">
+    <input type="text" placeholder="Seu nome" required>
+    <input type="email" placeholder="Seu e-mail" required>
+    <textarea placeholder="Mensagem"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p id="msg"></p>
+</section>
+
+<footer>
+  © 2026 Studio Bella • Beleza que inspira
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
