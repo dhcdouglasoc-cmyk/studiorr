@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio R&R</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Studio R&R | Beleza & Estética</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <H1>STUDIO</H1>
+
+  <header>
+    <h1>Studio R&R</h1>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Realce sua beleza natural</h2>
+    <p>Cuidado, estilo e autoestima em cada detalhe</p>
+    <button onclick="scrollContato()">Agendar horário</button>
+  </section>
+
+  <section id="servicos" class="servicos">
+    <h3>Nossos Serviços</h3>
+
+    <div class="cards">
+      <div class="card">
+        <h4>Design de Sobrancelhas</h4>
+        <p>Harmonia e expressão no seu olhar.</p>
+      </div>
+
+      <div class="card">
+        <h4>Manicure & Pedicure</h4>
+        <p>Beleza e cuidado em cada detalhe.</p>
+      </div>
+
+      <div class="card">
+        <h4>Limpeza de Pele</h4>
+        <p>Pele renovada, leve e saudável.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre">
+    <h3>Sobre o Studio</h3>
+    <p>
+      Somos um studio especializado em beleza feminina, focado em proporcionar
+      experiências únicas, acolhedoras e cheias de cuidado.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Studio R&R • Beleza que inspira</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
