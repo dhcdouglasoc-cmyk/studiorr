@@ -1,20 +1,590 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Salão de Beleza Premium — Realçando sua beleza com elegância e profissionalismo. Agende pelo WhatsApp." />
+  <meta name="keywords" content="salão de beleza, corte feminino, coloração, escova, hidratação, sobrancelhas, maquiagem" />
+  <meta name="author" content="Salão Lumière" />
+  <meta property="og:title" content="Lumière Beauty — Salão de Beleza Premium" />
+  <meta property="og:description" content="Um espaço pensado para valorizar sua autoestima através de cuidados personalizados e atendimento de excelência." />
+  <meta property="og:type" content="website" />
+  <title>Lumière Beauty — Salão de Beleza Premium</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <h1>Studio R & R</h1>
-    <nav>
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Contato</a></li>
+
+  <!-- ===== HEADER / NAVEGAÇÃO ===== -->
+  <header class="header" id="header" role="banner">
+    <div class="header__inner">
+      <a href="#hero" class="header__logo" aria-label="Lumière Beauty - Início">
+        <span class="header__logo-icon">✦</span>
+        <span class="header__logo-text">Lumière <em>Beauty</em></span>
+      </a>
+      <nav class="header__nav" role="navigation" aria-label="Menu principal">
+        <ul class="header__nav-list">
+          <li><a href="#sobre" class="header__nav-link">Sobre</a></li>
+          <li><a href="#servicos" class="header__nav-link">Serviços</a></li>
+          <li><a href="#galeria" class="header__nav-link">Galeria</a></li>
+          <li><a href="#depoimentos" class="header__nav-link">Depoimentos</a></li>
+          <li><a href="#localizacao" class="header__nav-link">Localização</a></li>
         </ul>
-    </nav>
+      </nav>
+      <a
+        href="https://wa.me/5500000000000"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn--gold header__cta"
+        aria-label="Agendar pelo WhatsApp"
+      >Agendar</a>
+      <button class="header__menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Menu mobile -->
+    <div class="header__mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu mobile">
+      <ul>
+        <li><a href="#sobre" class="mobile-link">Sobre</a></li>
+        <li><a href="#servicos" class="mobile-link">Serviços</a></li>
+        <li><a href="#galeria" class="mobile-link">Galeria</a></li>
+        <li><a href="#depoimentos" class="mobile-link">Depoimentos</a></li>
+        <li><a href="#localizacao" class="mobile-link">Localização</a></li>
+        <li>
+          <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="btn btn--gold mobile-link">
+            Agendar pelo WhatsApp
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero" aria-label="Destaque principal">
+      <div class="hero__bg">
+        <img
+          src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1800&q=80"
+          alt="Interior elegante de salão de beleza premium"
+          class="hero__img"
+          loading="eager"
+        />
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal">Bem-vinda ao espaço do seu bem-estar</p>
+        <h1 class="hero__title reveal reveal--delay-1">
+          Realçando sua beleza<br />
+          <em>com elegância</em><br />
+          e profissionalismo.
+        </h1>
+        <p class="hero__subtitle reveal reveal--delay-2">
+          Um espaço pensado para valorizar sua autoestima através de<br />
+          cuidados personalizados e atendimento de excelência.
+        </p>
+        <div class="hero__actions reveal reveal--delay-3">
+          <a
+            href="https://wa.me/5500000000000"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--gold btn--lg"
+            aria-label="Agendar pelo WhatsApp"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.554 4.107 1.523 5.832L0 24l6.335-1.509A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.819 9.819 0 01-5.006-1.373l-.36-.214-3.728.888.922-3.636-.235-.374A9.82 9.82 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818s9.818 4.398 9.818 9.818-4.398 9.818-9.818 9.818z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE NÓS ===== -->
+    <section class="sobre" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="container">
+        <div class="sobre__grid">
+          <div class="sobre__visual">
+            <div class="sobre__img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=80"
+                alt="Profissional realizando atendimento no salão"
+                loading="lazy"
+                class="sobre__img"
+              />
+            </div>
+            <div class="sobre__badge">
+              <span class="sobre__badge-num">+500</span>
+              <span class="sobre__badge-label">Clientes<br />Satisfeitas</span>
+            </div>
+          </div>
+          <div class="sobre__content">
+            <p class="section-eyebrow reveal">Quem somos</p>
+            <h2 class="section-title reveal reveal--delay-1" id="sobre-titulo">
+              Mais do que beleza,<br /><em>uma experiência</em>
+            </h2>
+            <p class="sobre__text reveal reveal--delay-2">
+              Mais do que um salão de beleza, oferecemos uma experiência de cuidado,
+              bem-estar e valorização da sua beleza natural em um ambiente acolhedor
+              e sofisticado.
+            </p>
+            <p class="sobre__text reveal reveal--delay-2">
+              Nossa equipe é formada por profissionais altamente qualificadas, apaixonadas
+              pelo que fazem e comprometidas em oferecer o melhor de cada técnica
+              para realçar o que há de mais belo em você.
+            </p>
+            <div class="sobre__stats reveal reveal--delay-3">
+              <div class="sobre__stat">
+                <strong>8+</strong>
+                <span>Anos de experiência</span>
+              </div>
+              <div class="sobre__stat">
+                <strong>12</strong>
+                <span>Profissionais</span>
+              </div>
+              <div class="sobre__stat">
+                <strong>100%</strong>
+                <span>Dedicação</span>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/5500000000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--outline reveal reveal--delay-3"
+              aria-label="Falar conosco pelo WhatsApp"
+            >Falar Conosco</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    <section class="servicos" id="servicos" aria-labelledby="servicos-titulo">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow reveal">O que oferecemos</p>
+          <h2 class="section-title reveal reveal--delay-1" id="servicos-titulo">
+            Nossos <em>Serviços</em>
+          </h2>
+          <p class="section-subtitle reveal reveal--delay-2">
+            Cada serviço é realizado com dedicação, técnica apurada e produtos premium
+            selecionados especialmente para você.
+          </p>
+        </div>
+        <div class="servicos__grid">
+          <!-- Card 1 -->
+          <article class="servico-card reveal">
+            <div class="servico-card__icon" aria-hidden="true">✂</div>
+            <h3 class="servico-card__title">Corte Feminino</h3>
+            <p class="servico-card__desc">Cortes personalizados que valorizam seu rosto e estilo de vida.</p>
+            <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20consultar%20sobre%20Corte%20Feminino." target="_blank" rel="noopener noreferrer" class="servico-card__btn" aria-label="Consultar sobre Corte Feminino pelo WhatsApp">Consultar pelo WhatsApp</a>
+          </article>
+          <!-- Card 2 -->
+          <article class="servico-card reveal reveal--delay-1">
+            <div class="servico-card__icon" aria-hidden="true">💨</div>
+            <h3 class="servico-card__title">Escova</h3>
+            <p class="servico-card__desc">Finalizações perfeitas com escova modeladora ou progressiva.</p>
+            <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20consultar%20sobre%20Escova." target="_blank" rel="noopener noreferrer" class="servico-card__btn" aria-label="Consultar sobre Escova pelo WhatsApp">Consultar pelo WhatsApp</a>
+          </article>
+          <!-- Card 3 -->
+          <article class="servico-card reveal reveal--delay-2">
+            <div class="servico-card__icon" aria-hidden="true">🎨</div>
+            <h3 class="servico-card__title">Coloração</h3>
+            <p class="servico-card__desc">Cores vibrantes ou naturais com técnicas modernas e seguras.</p>
+            <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20consultar%20sobre%20Coloração." target="_blank" rel="noopener noreferrer" class="servico-card__btn" aria-label="Consultar sobre Coloração pelo WhatsApp">Consultar pelo WhatsApp</a>
+          </article>
+          <!-- Card 4 -->
+          <article class="servico-card reveal reveal--delay-1">
+            <div class="servico-card__icon" aria-hidden="true">✨</div>
+            <h3 class="servico-card__title">Mechas</h3>
+            <p class="servico-card__desc">Mechas californianas, balayage e iluminações personalizadas.</p>
+            <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20consultar%20sobre%20Mechas." target="_blank" rel="noopener noreferrer" class="servico-card__btn" aria-label="Consultar sobre Mechas pelo WhatsApp">Consultar pelo WhatsApp</a>
+          </article>
+          <!-- Card 5 -->
+          <article class="servico-card reveal reveal--delay-2">
+            <div class="servico-card__icon" aria-hidden="true">💧</div>
+            <h3 class="servico-card__title">Hidratação</h3>
+            <p class="servico-card__desc">Tratamentos profundos para nutrição, maciez e brilho intenso.</p>
+            <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20consultar%20sobre%20Hidratação." target="_blank" rel="noopener noreferrer" class="servico-card__btn" aria-label="Consultar sobre Hidratação pelo WhatsApp">Consultar pelo WhatsApp</a>
+          </article>
+          <!-- Card 6 -->
+          <article class="servico-card reveal reveal--delay-3">
+            <div class="servico-card__icon" aria-hidden="true">🔬</div>
+            <h3 class="servico-card__title">Reconstrução Capilar</h3>
+            <p class="servico-card__desc">Reposição de proteínas e reestruturação dos fios danificados.</p>
+            <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20consultar%20sobre%20Reconstrução%20Capilar." target="_blank" rel="noopener noreferrer" class="servico-card__btn" aria-label="Consultar sobre Reconstrução Capilar pelo WhatsApp">Consultar pelo WhatsApp</a>
+          </article>
+          <!-- Card 7 -->
+          <article class="servico-card reveal reveal--delay-2">
+            <div class="servico-card__icon" aria-hidden="true">👁</div>
+            <h3 class="servico-card__title">Design de Sobrancelhas</h3>
+            <p class="servico-card__desc">Design personalizado que emoldura e harmoniza seu olhar.</p>
+            <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20consultar%20sobre%20Design%20de%20Sobrancelhas." target="_blank" rel="noopener noreferrer" class="servico-card__btn" aria-label="Consultar sobre Design de Sobrancelhas pelo WhatsApp">Consultar pelo WhatsApp</a>
+          </article>
+          <!-- Card 8 -->
+          <article class="servico-card reveal reveal--delay-3">
+            <div class="servico-card__icon" aria-hidden="true">💄</div>
+            <h3 class="servico-card__title">Maquiagem</h3>
+            <p class="servico-card__desc">Make artística, social e noiva para todos os tipos de eventos.</p>
+            <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20consultar%20sobre%20Maquiagem." target="_blank" rel="noopener noreferrer" class="servico-card__btn" aria-label="Consultar sobre Maquiagem pelo WhatsApp">Consultar pelo WhatsApp</a>
+          </article>
+        </div>
+        <!-- WhatsApp CTA após serviços -->
+        <div class="section-cta reveal">
+          <p>Não encontrou o que procura? Entre em contato!</p>
+          <a
+            href="https://wa.me/5500000000000"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--gold"
+            aria-label="Falar pelo WhatsApp sobre serviços"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.554 4.107 1.523 5.832L0 24l6.335-1.509A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.819 9.819 0 01-5.006-1.373l-.36-.214-3.728.888.922-3.636-.235-.374A9.82 9.82 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818s9.818 4.398 9.818 9.818-4.398 9.818-9.818 9.818z"/></svg>
+            Falar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALERIA ===== -->
+    <section class="galeria" id="galeria" aria-labelledby="galeria-titulo">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow reveal">Nosso trabalho</p>
+          <h2 class="section-title reveal reveal--delay-1" id="galeria-titulo">
+            Beleza em cada <em>detalhe</em>
+          </h2>
+        </div>
+        <div class="galeria__grid">
+          <div class="galeria__item galeria__item--tall reveal">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=75" alt="Finalização de cabelo loiro com escova" loading="lazy" />
+            <div class="galeria__hover">
+              <span>Coloração & Escova</span>
+            </div>
+          </div>
+          <div class="galeria__item reveal reveal--delay-1">
+            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=600&q=75" alt="Aplicação de coloração capilar" loading="lazy" />
+            <div class="galeria__hover"><span>Coloração</span></div>
+          </div>
+          <div class="galeria__item reveal reveal--delay-2">
+            <img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=600&q=75" alt="Tratamento capilar de hidratação" loading="lazy" />
+            <div class="galeria__hover"><span>Hidratação Profunda</span></div>
+          </div>
+          <div class="galeria__item galeria__item--wide reveal reveal--delay-1">
+            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=75" alt="Ambiente interno do salão" loading="lazy" />
+            <div class="galeria__hover"><span>Nosso Espaço</span></div>
+          </div>
+          <div class="galeria__item reveal reveal--delay-2">
+            <img src="https://images.unsplash.com/photo-1580618864188-f4f519a9b9d6?w=600&q=75" alt="Penteado artístico finalizado" loading="lazy" />
+            <div class="galeria__hover"><span>Penteado</span></div>
+          </div>
+          <div class="galeria__item reveal reveal--delay-3">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=75" alt="Maquiagem para evento" loading="lazy" />
+            <div class="galeria__hover"><span>Maquiagem</span></div>
+          </div>
+          <div class="galeria__item galeria__item--tall reveal reveal--delay-2">
+            <img src="https://images.unsplash.com/photo-1633681926035-ec1ac984418a?w=600&q=75" alt="Design de sobrancelhas sendo realizado" loading="lazy" />
+            <div class="galeria__hover"><span>Design de Sobrancelhas</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DIFERENCIAIS ===== -->
+    <section class="diferenciais" id="diferenciais" aria-labelledby="diferenciais-titulo">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow reveal">Por que nos escolher</p>
+          <h2 class="section-title reveal reveal--delay-1" id="diferenciais-titulo">
+            Nossos <em>Diferenciais</em>
+          </h2>
+        </div>
+        <div class="diferenciais__grid">
+          <div class="diferencial-card reveal">
+            <div class="diferencial-card__num" aria-hidden="true">01</div>
+            <div class="diferencial-card__icon" aria-hidden="true">🌸</div>
+            <h3>Atendimento Personalizado</h3>
+            <p>Cada cliente é única. Escutamos e adaptamos cada serviço ao seu perfil e necessidade.</p>
+          </div>
+          <div class="diferencial-card reveal reveal--delay-1">
+            <div class="diferencial-card__num" aria-hidden="true">02</div>
+            <div class="diferencial-card__icon" aria-hidden="true">⭐</div>
+            <h3>Produtos de Alta Qualidade</h3>
+            <p>Trabalhamos com as melhores marcas do mercado para garantir resultados excepcionais.</p>
+          </div>
+          <div class="diferencial-card reveal reveal--delay-2">
+            <div class="diferencial-card__num" aria-hidden="true">03</div>
+            <div class="diferencial-card__icon" aria-hidden="true">🏛</div>
+            <h3>Ambiente Sofisticado</h3>
+            <p>Um espaço pensado para o seu conforto, com decoração elegante e atmosfera acolhedora.</p>
+          </div>
+          <div class="diferencial-card reveal reveal--delay-1">
+            <div class="diferencial-card__num" aria-hidden="true">04</div>
+            <div class="diferencial-card__icon" aria-hidden="true">🎓</div>
+            <h3>Profissionais Qualificadas</h3>
+            <p>Equipe em constante atualização com as últimas tendências e técnicas do mercado.</p>
+          </div>
+          <div class="diferencial-card reveal reveal--delay-2">
+            <div class="diferencial-card__num" aria-hidden="true">05</div>
+            <div class="diferencial-card__icon" aria-hidden="true">📱</div>
+            <h3>Agendamento Rápido</h3>
+            <p>Agende direto pelo WhatsApp de forma simples, rápida e sem complicações.</p>
+          </div>
+          <div class="diferencial-card reveal reveal--delay-3">
+            <div class="diferencial-card__num" aria-hidden="true">06</div>
+            <div class="diferencial-card__icon" aria-hidden="true">💝</div>
+            <h3>Foco na Satisfação</h3>
+            <p>Sua felicidade é nossa maior conquista. Não paramos até você se sentir radiante.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="depoimentos" id="depoimentos" aria-labelledby="depoimentos-titulo">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow reveal">O que dizem sobre nós</p>
+          <h2 class="section-title reveal reveal--delay-1" id="depoimentos-titulo">
+            Histórias de <em>Transformação</em>
+          </h2>
+        </div>
+        <div class="depoimentos__track-wrap">
+          <div class="depoimentos__track" id="depoimentosTrack" role="list">
+            <!-- Card 1 -->
+            <article class="depoimento-card" role="listitem">
+              <div class="depoimento-card__stars" aria-label="Avaliação: 5 estrelas">★★★★★</div>
+              <blockquote class="depoimento-card__text">
+                "Simplesmente incrível! Fui fazer uma coloração e saí completamente transformada. A atenção ao detalhe é impressionante, e me senti verdadeiramente especial durante todo o atendimento."
+              </blockquote>
+              <div class="depoimento-card__author">
+                <img src="https://i.pravatar.cc/60?img=47" alt="Foto de Ana Carolina" loading="lazy" />
+                <div>
+                  <strong>Ana Carolina</strong>
+                  <span>Cliente fiel desde 2020</span>
+                </div>
+              </div>
+            </article>
+            <!-- Card 2 -->
+            <article class="depoimento-card" role="listitem">
+              <div class="depoimento-card__stars" aria-label="Avaliação: 5 estrelas">★★★★★</div>
+              <blockquote class="depoimento-card__text">
+                "O ambiente é lindo, aconchegante e sofisticado. As profissionais são extremamente talentosas. Fiz mechas e hidratação e o resultado superou todas as minhas expectativas!"
+              </blockquote>
+              <div class="depoimento-card__author">
+                <img src="https://i.pravatar.cc/60?img=32" alt="Foto de Mariana Souza" loading="lazy" />
+                <div>
+                  <strong>Mariana Souza</strong>
+                  <span>Cliente desde 2021</span>
+                </div>
+              </div>
+            </article>
+            <!-- Card 3 -->
+            <article class="depoimento-card" role="listitem">
+              <div class="depoimento-card__stars" aria-label="Avaliação: 5 estrelas">★★★★★</div>
+              <blockquote class="depoimento-card__text">
+                "Fiz minha maquiagem de noiva aqui e ficou perfeita! A profissional entendeu exatamente o que eu queria e o resultado durou a noite toda. Recomendo demais!"
+              </blockquote>
+              <div class="depoimento-card__author">
+                <img src="https://i.pravatar.cc/60?img=25" alt="Foto de Juliana Ferreira" loading="lazy" />
+                <div>
+                  <strong>Juliana Ferreira</strong>
+                  <span>Noiva 2023</span>
+                </div>
+              </div>
+            </article>
+            <!-- Card 4 -->
+            <article class="depoimento-card" role="listitem">
+              <div class="depoimento-card__stars" aria-label="Avaliação: 5 estrelas">★★★★★</div>
+              <blockquote class="depoimento-card__text">
+                "Atendimento impecável do início ao fim. Fiz reconstrução capilar e meus fios voltaram a vida! Produto de qualidade e profissionais que realmente entendem de cabelo."
+              </blockquote>
+              <div class="depoimento-card__author">
+                <img src="https://i.pravatar.cc/60?img=12" alt="Foto de Fernanda Lima" loading="lazy" />
+                <div>
+                  <strong>Fernanda Lima</strong>
+                  <span>Cliente desde 2022</span>
+                </div>
+              </div>
+            </article>
+            <!-- Card 5 -->
+            <article class="depoimento-card" role="listitem">
+              <div class="depoimento-card__stars" aria-label="Avaliação: 5 estrelas">★★★★★</div>
+              <blockquote class="depoimento-card__text">
+                "Lugar maravilhoso! Cheiroso, elegante e com um atendimento que faz você se sentir em um spa. O design de sobrancelhas foi impecável — valorizou todo o meu olhar."
+              </blockquote>
+              <div class="depoimento-card__author">
+                <img src="https://i.pravatar.cc/60?img=56" alt="Foto de Beatriz Santos" loading="lazy" />
+                <div>
+                  <strong>Beatriz Santos</strong>
+                  <span>Cliente desde 2023</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="depoimentos__controls" aria-label="Controles do carrossel">
+            <button class="depoimentos__arrow depoimentos__arrow--prev" id="prevBtn" aria-label="Depoimento anterior">‹</button>
+            <div class="depoimentos__dots" id="depoimentosDots" role="tablist" aria-label="Navegar pelos depoimentos"></div>
+            <button class="depoimentos__arrow depoimentos__arrow--next" id="nextBtn" aria-label="Próximo depoimento">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHATSAPP CTA ANTES DO RODAPÉ ===== -->
+    <section class="cta-banner" aria-label="Chamada para agendamento">
+      <div class="container">
+        <div class="cta-banner__inner reveal">
+          <div class="cta-banner__text">
+            <h2>Pronta para se sentir <em>radiante?</em></h2>
+            <p>Agende agora pelo WhatsApp e garanta seu horário. Atendemos com exclusividade e carinho.</p>
+          </div>
+          <a
+            href="https://wa.me/5500000000000"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--gold btn--lg"
+            aria-label="Agendar agora pelo WhatsApp"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.554 4.107 1.523 5.832L0 24l6.335-1.509A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.819 9.819 0 01-5.006-1.373l-.36-.214-3.728.888.922-3.636-.235-.374A9.82 9.82 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818s9.818 4.398 9.818 9.818-4.398 9.818-9.818 9.818z"/></svg>
+            Agendar Agora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LOCALIZAÇÃO ===== -->
+    <section class="localizacao" id="localizacao" aria-labelledby="localizacao-titulo">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow reveal">Onde estamos</p>
+          <h2 class="section-title reveal reveal--delay-1" id="localizacao-titulo">
+            Venha nos <em>Visitar</em>
+          </h2>
+        </div>
+        <div class="localizacao__grid">
+          <div class="localizacao__map reveal">
+            <iframe
+              src="https://maps.google.com/maps?q=Rua+das+Flores,+123,+São+Paulo&output=embed&z=15"
+              width="100%"
+              height="400"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização do Lumière Beauty no Google Maps"
+              aria-label="Mapa de localização do salão"
+            ></iframe>
+          </div>
+          <div class="localizacao__info reveal reveal--delay-1">
+            <div class="localizacao__item">
+              <div class="localizacao__item-icon" aria-hidden="true">📍</div>
+              <div>
+                <strong>Endereço</strong>
+                <p>Rua das Flores, 123 — Jardim Primavera<br />São Paulo — SP, 01234-567</p>
+              </div>
+            </div>
+            <div class="localizacao__item">
+              <div class="localizacao__item-icon" aria-hidden="true">🕐</div>
+              <div>
+                <strong>Horário de Funcionamento</strong>
+                <p>Segunda a Sexta: 9h às 20h<br />Sábado: 8h às 18h<br />Domingo: Fechado</p>
+              </div>
+            </div>
+            <div class="localizacao__item">
+              <div class="localizacao__item-icon" aria-hidden="true">📞</div>
+              <div>
+                <strong>Telefone / WhatsApp</strong>
+                <p>(11) 99999-9999</p>
+              </div>
+            </div>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Rua+das+Flores+123+São+Paulo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--outline"
+              aria-label="Traçar rota no Google Maps"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Traçar Rota
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__top">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="#hero" class="footer__logo" aria-label="Lumière Beauty - Voltar ao topo">
+              <span>✦</span>
+              <span>Lumière <em>Beauty</em></span>
+            </a>
+            <p>Um espaço dedicado a realçar a beleza natural de cada mulher com sofisticação e cuidado.</p>
+            <div class="footer__social" aria-label="Redes sociais">
+              <a href="#" aria-label="Instagram do Lumière Beauty" title="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="#" aria-label="Facebook do Lumière Beauty" title="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp do Lumière Beauty" title="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.554 4.107 1.523 5.832L0 24l6.335-1.509A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.819 9.819 0 01-5.006-1.373l-.36-.214-3.728.888.922-3.636-.235-.374A9.82 9.82 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818s9.818 4.398 9.818 9.818-4.398 9.818-9.818 9.818z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h3>Serviços</h3>
+            <ul>
+              <li><a href="#servicos">Corte Feminino</a></li>
+              <li><a href="#servicos">Coloração & Mechas</a></li>
+              <li><a href="#servicos">Tratamentos Capilares</a></li>
+              <li><a href="#servicos">Design de Sobrancelhas</a></li>
+              <li><a href="#servicos">Maquiagem</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3>Horários</h3>
+            <ul class="footer__hours">
+              <li><span>Seg – Sex</span><span>9h às 20h</span></li>
+              <li><span>Sábado</span><span>8h às 18h</span></li>
+              <li><span>Domingo</span><span>Fechado</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© <span id="footerYear"></span> Lumière Beauty. Todos os direitos reservados.</p>
+        <p>Desenvolvido com <span aria-label="amor">♥</span> para realçar sua beleza.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BOTÃO FLUTUANTE WHATSAPP ===== -->
+  <a
+    href="https://wa.me/5500000000000"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    aria-label="Agendar pelo WhatsApp — botão flutuante"
+    title="Falar pelo WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.554 4.107 1.523 5.832L0 24l6.335-1.509A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.819 9.819 0 01-5.006-1.373l-.36-.214-3.728.888.922-3.636-.235-.374A9.82 9.82 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818s9.818 4.398 9.818 9.818-4.398 9.818-9.818 9.818z"/></svg>
+    <span class="whatsapp-float__label">Agendar</span>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
