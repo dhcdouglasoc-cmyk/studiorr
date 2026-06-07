@@ -378,8 +378,11 @@ button {
 .hero__bg {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
+.hero__bg img,
 .hero__img {
   width: 100%;
   height: 100%;
@@ -387,6 +390,7 @@ button {
   object-position: center 30%;
   transform: scale(1.05);
   transition: transform 8s ease;
+  display: block;
 }
 
 .hero.loaded .hero__img {
@@ -808,16 +812,22 @@ button {
 .depoimentos__track-wrap {
   position: relative;
   overflow: hidden;
+  /* Garante que o track não vaze para fora */
+  width: 100%;
 }
 
 .depoimentos__track {
   display: flex;
   gap: 24px;
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* Sem overflow oculto aqui — o wrap já controla */
+  will-change: transform;
 }
 
 .depoimento-card {
-  min-width: calc(33.333% - 16px);
+  /* Tamanho correto: 1/3 do container menos as gaps */
+  min-width: calc((100%) / 3 - 16px);
+  flex: 0 0 calc((100%) / 3 - 16px);
   background: var(--cream);
   border-radius: var(--radius-md);
   padding: 36px 32px;
@@ -826,6 +836,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  box-sizing: border-box;
 }
 
 .depoimento-card__stars {
@@ -1262,6 +1273,7 @@ button {
 
   .depoimento-card {
     min-width: calc(50% - 12px);
+    flex: 0 0 calc(50% - 12px);
   }
 
   .cta-banner__inner {
@@ -1296,7 +1308,8 @@ button {
   }
 
   .depoimento-card {
-    min-width: calc(100% - 0px);
+    min-width: 100%;
+    flex: 0 0 100%;
   }
 
   .footer__grid {
@@ -1333,6 +1346,20 @@ button {
 
   .hero__title {
     font-size: 2.4rem;
+  }
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero__bg,
+  .hero__bg img,
+  .hero__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
