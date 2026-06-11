@@ -1363,6 +1363,8 @@ button {
   }
 }
 
+/* ─── DK WEB CODE ───────────────────────────────────────────── */
+
 /* ─── PREFERÊNCIA DE MOVIMENTO REDUZIDO ──────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
