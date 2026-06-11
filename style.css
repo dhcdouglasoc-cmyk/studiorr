@@ -1364,7 +1364,15 @@ button {
 }
 
 /* ─── DK WEB CODE ───────────────────────────────────────────── */
+.dk a {
+  color: aqua;
+  text-decoration: none;
+  transition: text-decoration var(--transition-fast);
+}
 
+.dk a:hover {
+  text-decoration: underline;
+}
 /* ─── PREFERÊNCIA DE MOVIMENTO REDUZIDO ──────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
